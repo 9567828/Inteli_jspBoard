@@ -23,5 +23,6 @@
         <textarea name="board_content" id="board_content" cols="30" rows="10" style="ime-mode: active;"></textarea> <br>
         <input type="submit" value="글쓰기">
     </form>
+    <button onclick="location.href='/board/'">목록으로</button>
 </body>
 </html>

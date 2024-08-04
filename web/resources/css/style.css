@@ -1,0 +1,137 @@
+/* common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {font-family: 'SUIT Variable', sans-serif;}
+
+.inner {
+    width: 100rem;
+    margin: 5rem auto;
+}
+
+/* list.jsp */
+.title-text {
+    font-size: 3rem;
+    margin-bottom: 8rem;
+}
+#to-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10rem;
+}
+
+#write-btn {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 10px;
+    border: solid 1px #212121;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+#write-btn:hover {
+    background-color: #8E35FF;
+    color: #fff;
+    border: none;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.17);
+}
+
+#board-wrap {
+    margin: 3.5rem auto;
+    width: 80rem;
+    height: 20rem;
+    border: solid 1px #000;
+    border-radius: 2rem;
+}
+
+#content-wrap {
+    position: relative;
+    padding: 1.5rem 0 0 4rem;
+}
+
+#content-wrap::after {
+    position: absolute;
+    left: 38px;
+    bottom: -40px;
+    content: "";
+    width: 72rem;
+    height: 1px;
+    background-color: #000;
+}
+
+.user-info {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info .fa-circle-user {
+    font-size: 3rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+.user .board-writer {
+    font-weight: bold;
+}
+
+.user .write-date {
+    font-size: 1.4rem;
+    color: #393535;
+}
+
+.board-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.board-content {
+    font-size: 1.6rem;
+}
+
+#commu-wrap {
+    padding: 4.5rem 4rem 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#talk-wrap {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+
+#talk-wrap > * > p {
+    font-size: 1.4rem;
+}
+
+#talk-wrap > * > i {
+    cursor: pointer;
+}
+
+#edit-wrap {
+    display: flex;
+    font-size: 2.5rem;
+    gap: 2rem;
+}
+
+#edit-wrap > i {
+    cursor: pointer;
+}
+
