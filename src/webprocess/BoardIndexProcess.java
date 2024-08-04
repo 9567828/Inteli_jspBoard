@@ -20,8 +20,8 @@ public class BoardIndexProcess implements WebProcess {
 
         List<JspBoard> boardList = new ArrayList<>();
 
-        String boardListSql = "SELECT * FROM board";
-        String commentSql = "SELECT count(*) AS comment_cnt FROM comments WHERE board_id = ?";
+        String boardListSql = "SELECT * FROM board2";
+        String commentSql = "SELECT count(*) AS comment_cnt FROM comments2 WHERE board_id = ?";
 
         try (
                 Connection conn = db.getConnection();
@@ -41,7 +41,6 @@ public class BoardIndexProcess implements WebProcess {
                         } else {
                             jb.setCommentCount(0);
                         }
-
                     }
                     boardList.add(jb);
                 }

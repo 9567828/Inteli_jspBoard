@@ -20,7 +20,7 @@ public class BoardWriteProcess implements WebProcess {
 
         JspBoard jb = new JspBoard(request);
 
-        String sql = "INSERT INTO board (board_id, board_title, board_password, board_writer, board_content, board_write_date, board_writer_ip_addr) " +
+        String sql = "INSERT INTO board2 (board_id, board_title, board_password, board_writer, board_content, board_write_date, board_writer_ip_addr) " +
                 "VALUES(board_seq.nextval, ?, ?, ?, ?, SYSDATE, ?)";
 
         try (

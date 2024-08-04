@@ -20,7 +20,7 @@
         <label for="board_writer">글쓴이</label>
         <input type="text" name="board_writer" id="board_writer"> <br>
         <label for="board_content">글내용</label>
-        <textarea name="board_content" id="board_content" cols="30" rows="10"></textarea> <br>
+        <textarea name="board_content" id="board_content" cols="30" rows="10" style="ime-mode: active;"></textarea> <br>
         <input type="submit" value="글쓰기">
     </form>
 </body>

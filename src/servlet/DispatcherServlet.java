@@ -38,7 +38,8 @@ public class DispatcherServlet extends HttpServlet {
         URI_MAPPING.put("GET:/board/", new BoardIndexProcess());
         URI_MAPPING.put("GET:/board/write", new BoardWriteFormProcess());
         URI_MAPPING.put("POST:/board/write", new BoardWriteProcess());
-        URI_MAPPING.put("GET:/board/comment", new CommentsProcess());
+        URI_MAPPING.put("GET:/board/comment", new CommentsFormProcess());
+        URI_MAPPING.put("POST:/board/comment", new CommentsProcess());
     }
 
     @Override
@@ -51,12 +52,14 @@ public class DispatcherServlet extends HttpServlet {
         String entireURI = req.getRequestURI();
         String uri = entireURI.substring(contextPath.length());
 
+        System.out.println("주소: " + method + ":" + uri);
+
         WebProcess wp = URI_MAPPING.get(method + ":" + uri);
         String nextView = null;
         if (wp != null) {
             nextView = wp.process(req, resp);
         } else {
-            resp.sendRedirect(contextPath + "/notfound");
+            resp.sendRedirect(contextPath + "/error/");
             return;
         }
 

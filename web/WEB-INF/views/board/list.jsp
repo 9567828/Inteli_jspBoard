@@ -14,6 +14,9 @@
 <html>
 <head>
     <title>게시판 목록</title>
+
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <script src="https://kit.fontawesome.com/d95a86acc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h3>게시판 목록이에여</h3>
@@ -26,7 +29,7 @@
         <div>글쓴이: <%=board.getBoard_writer()%></div>
         <div>글내용: <%=board.getBoard_content()%></div>
         <div>작성날짜: <%=board.getBoard_write_date()%></div>
-        <div onclick="go_comment(<%=board.getBoard_id()%>)">코멘트: <%=board.getCommentCount()%></div>
+        <div onclick="go_comment(<%=board.getBoard_id()%>)">댓글: <%=board.getCommentCount()%></div>
         <div>좋아요: <%=board.getBoard_good_count()%></div>
         <div>싫어요: <%=board.getBoard_bad_count()%></div>
     </div>
@@ -39,11 +42,6 @@
 
     <button onclick="location.href='./write'">글쓰러가기</button>
 
-    <script>
-        function go_comment(board_id) {
-            console.log("board_id: " + board_id)
-            location.href='./comment?board_id=' + board_id;
-        }
-    </script>
+    <script src="/resources/js/script.js"></script>
 </body>
 </html>

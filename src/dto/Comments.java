@@ -41,14 +41,13 @@ public class Comments {
     }
 
     public Comments(HttpServletRequest request) {
-        this.comment_id = Integer.parseInt(request.getParameter("comment_id"));
         this.comment_writer = request.getParameter("comment_writer");
         this.comment_password = request.getParameter("comment_password");
         this.comment_content = request.getParameter("comment_content");
         this.comment_date = new Date();
-        this.comment_view_count = Integer.parseInt(request.getParameter("comment_view_count"));
-        this.comment_like_count = Integer.parseInt(request.getParameter("comment_like_count"));
-        this.comment_bad_count = Integer.parseInt(request.getParameter("comment_bad_count"));
+        this.comment_view_count = 0;
+        this.comment_like_count = 0;
+        this.comment_bad_count = 0;
     }
 
     public int getComment_id() {
